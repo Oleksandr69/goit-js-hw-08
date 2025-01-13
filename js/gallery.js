@@ -91,10 +91,17 @@ gallery.addEventListener('click', function (event) {
   const selectedSource = event.target.dataset.source;
   // console.log(event.target.dataset.source);
 
-  const instance = basicLightbox.create(`<div class="modal">
+  const instance = basicLightbox.create(
+    `<div class="modal">
     <img src="${selectedSource}">
     </div>
-`);
+`,
+    {
+      onShow: instance => {
+        instance.element().querySelector('img').onclick = instance.close;
+      },
+    }
+  );
 
   instance.show();
 });

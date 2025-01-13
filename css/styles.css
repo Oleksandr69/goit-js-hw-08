@@ -25,14 +25,22 @@ img {
   height: 200px;
 }
 
-/* .gallery-item:hover,
-.gallery-item:focus {
-  width: 376px;
-  height: 208px;
-} */
+.gallery-item:hover .gallery-image,
+.gallery-item:focus .gallery-image {
+  /* width: 376px;
+  height: 208px; */
+  transform: scale(1.05);
+}
 
 .gallery-image {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.modal {
+  background: rgba(46, 47, 66, 0.8);
+  max-width: 1440px;
+  padding: 28px 164px;
 }
