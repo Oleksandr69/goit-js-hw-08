@@ -98,7 +98,7 @@ gallery.addEventListener('click', function (event) {
 `,
     {
       onShow: instance => {
-        instance.element().querySelector('img').onclick = instance.close;
+        instance.element().querySelector('.modal').onclick = instance.close;
       },
     }
   );
